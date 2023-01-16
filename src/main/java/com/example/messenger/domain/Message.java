@@ -11,7 +11,7 @@ import javax.persistence.ManyToOne;
 @Entity
 public class Message {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy=GenerationType.AUTO)
     private Integer id;
 
     private String text;
@@ -21,18 +21,19 @@ public class Message {
     @JoinColumn(name = "user_id")
     private User author;
 
-    public Message(String text, String tag, User user) {
-        this.text = text;
-        this.tag = tag;
-        this.author = user;
+    public Message() {
     }
 
-    public Message() {
+    public Message(String text, String tag, User user) {
+        this.author = user;
+        this.text = text;
+        this.tag = tag;
     }
 
     public String getAuthorName() {
         return author != null ? author.getUsername() : "<noname>";
     }
+
     public User getAuthor() {
         return author;
     }
@@ -41,20 +42,12 @@ public class Message {
         this.author = author;
     }
 
-    public String getText() {
-        return text;
-    }
-
     public void setText(String text) {
         this.text = text;
     }
 
-    public String getTag() {
-        return tag;
-    }
-
-    public void setTag(String tag) {
-        this.tag = tag;
+    public String getText() {
+        return text;
     }
 
     public Integer getId() {
@@ -63,5 +56,13 @@ public class Message {
 
     public void setId(Integer id) {
         this.id = id;
+    }
+
+    public String getTag() {
+        return tag;
+    }
+
+    public void setTag(String tag) {
+        this.tag = tag;
     }
 }

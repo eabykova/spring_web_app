@@ -4,11 +4,12 @@
 <@c.page>
   <div>
       <@l.logout />
+      <span><a href="/user">User List</a></span>
   </div>
   <div>
     <form method="post">
-      <input type="text" name="text" placeholder="Введите сообщение" />
-      <input type="text" name="tag" placeholder="Тэг">
+      <input type="text" name="text" placeholder="Put the message" />
+      <input type="text" name="tag" placeholder="Tag">
       <input type="hidden" name="_csrf" value="${_csrf.token}" />
       <button type="submit">Add</button>
     </form>

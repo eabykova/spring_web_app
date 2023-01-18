@@ -28,7 +28,7 @@
         <strong>${message.authorName}</strong>
         <div><#--отображение картинки в цикле-->
             <#if message.filename??><#--условие, что в mesage есть поле fiename-->
-              <img src="/Users/20691518/Documents/study_projects/messenger/src/main/uploads/${message.filename}"><#--директория хранения файлов-->
+              <img src="/img/${message.filename}"><#--директория хранения файлов-->
             </#if>
         </div>
       </div>
@@ -36,3 +36,4 @@
       No message
     </#list>
 </@c.page>
+/messenger/src/main/uploads

@@ -1,11 +1,6 @@
-<!DOCTYPE HTML>
-<html>
-<head>
-  <title>Getting Started: Serving Web Content</title>
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-</head>
-<body>
-<div>Hello, User!</div>
-<a href="/main">Main Page</a>
-</body>
-</html>
+<#import "parts/common.ftl" as c>
+
+<@c.page>
+  <h5>Hello, Guest!</h5>
+  <div>This is a simple messenger made by mmicheli</div>
+</@c.page>
